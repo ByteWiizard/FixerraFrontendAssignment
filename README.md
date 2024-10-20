@@ -3,6 +3,9 @@
 
 This is a single-page web application built with React, TanStack Query (React Query), and Axios to display Pokémon information retrieved from an external API. The project focuses on building a dynamic and responsive user interface with efficient API integration, and caching to enhance performance.
 
+
+Check live link here:[https://yaman-fixerra.netlify.app/](Netlify Link)
+
 ## Deployment
 
 
