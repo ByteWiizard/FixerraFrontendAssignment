@@ -1,6 +1,6 @@
 import { PropTypes } from "prop-types";
 import { useQuery } from "@tanstack/react-query";
-import Error from "../../../pages/errors/Error";
+import ErrorComponent from "../../../pages/errors/Error";
 import Axios from "axios";
 
 
@@ -35,7 +35,7 @@ function BigCard({ closeBigCard, id, image }) {
         onClick={closeBigCard}
         className="shadow-md rounded-md bg-grayTheme p-4 text-center min-w-min z-10 fixed top-20 left-1/2 transform -translate-x-1/2"
       >
-        <Error></Error>
+        <ErrorComponent></ErrorComponent>
       </div>
     );
   }

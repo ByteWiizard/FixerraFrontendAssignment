@@ -12,7 +12,7 @@ import Loader from "../components/ui/Loader";
 import CardsContainer from "../components/ui/CardComponents/CardsContainer";
 import SmallCard from "../components/ui/CardComponents/SmallCard";
 
-import Error from "./errors/Error";
+import ErrorComponent from "./errors/Error";
 
 const Home = ({ searchTerm, openBigCard }) => {
 
@@ -90,7 +90,7 @@ const Home = ({ searchTerm, openBigCard }) => {
 
     return (
       <BackgroundImage>
-        <Error />
+        <ErrorComponent />
       </BackgroundImage>
     );
   } else if (searchTerm) {
@@ -99,7 +99,7 @@ const Home = ({ searchTerm, openBigCard }) => {
     if (!isPokemonAvailable(pokemonData)) {
       return (
         <BackgroundImage>
-          <Error />
+          <ErrorComponent />
         </BackgroundImage>
       );
     }
