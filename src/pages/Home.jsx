@@ -23,7 +23,7 @@ const Home = ({ searchTerm, openBigCard }) => {
     isLoading,
     isError
   } = useQuery({
-    queryKey: ["pokemon",  searchTerm || "", currentPage],
+    queryKey: ["pokemon", searchTerm || "", currentPage],
     queryFn: () => {
       if (searchTerm) {
         return Axios.get(`https://pokeapi.co/api/v2/pokemon/${searchTerm.toLowerCase()}`)
@@ -34,7 +34,7 @@ const Home = ({ searchTerm, openBigCard }) => {
             const { results } = res.data;
             const requests = results.map((result) => Axios.get(result.url));
             return Promise.all(requests).then((pokemonResponses) => {
-               return pokemonResponses.map((pokemonRes) => pokemonRes.data);  // Make sure data is returned here
+              return pokemonResponses.map((pokemonRes) => pokemonRes.data);  // Make sure data is returned here
             });
           });
       }
@@ -168,6 +168,10 @@ const Home = ({ searchTerm, openBigCard }) => {
           handlePrevClick={handlePrevClick}
           handleNextClick={handleNextClick}
         />
+
+        <footer className='mt-10 text-center font-sans font-medium text-gray-800'>
+            Assignment Completed by Yaman
+        </footer>
       </BackgroundImage>
     );
   }
